@@ -1,19 +1,16 @@
-import { useState } from 'react'
 import { CriarTarefa } from '../../components/CriarTarefa'
 import { ListarTarefa } from '../../components/ListarTarefa'
-import { TarefaContexto } from '../../contexts/TarefaContexto'
+import { TarefaProvider } from '../../contexts/TarefaContexto'
 import './index.css'
 
-export function Home()  {
+export function Home()  {  
 
-    const [tarefas, setTarefas] = useState([])  
-
-    return (
-        <TarefaContexto.Provider value={{tarefas, setTarefas}}>
+    return (      
+        <TarefaProvider>
             <main className="conteudo-principal">
                 <CriarTarefa />
                 <ListarTarefa />
             </main>
-        </TarefaContexto.Provider>
+        </TarefaProvider>      
     )
 }

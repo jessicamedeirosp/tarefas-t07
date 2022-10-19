@@ -1,8 +1,7 @@
-import { useContext } from "react"
-import { TarefaContexto } from "../../contexts/TarefaContexto"
+import { useTarefas } from "../../contexts/TarefaContexto"
 
 export function ListarTarefa() {
-    const {tarefas} = useContext(TarefaContexto)
+    const {tarefas} = useTarefas()
     return <ul>
         {tarefas && tarefas.map(item => {
             return (
