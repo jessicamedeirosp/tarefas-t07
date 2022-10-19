@@ -3,14 +3,15 @@ import { ListarTarefa } from '../../components/ListarTarefa'
 import { TarefaProvider } from '../../contexts/TarefaContexto'
 import './index.css'
 
-export function Home()  {  
+export function Home() {  
 
     return (      
         <TarefaProvider>
             <main className="conteudo-principal">
-                <CriarTarefa />
+                <CriarTarefa  className="content-flex"/>
                 <ListarTarefa />
             </main>
         </TarefaProvider>      
     )
 }
+
