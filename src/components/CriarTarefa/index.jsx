@@ -1,6 +1,8 @@
-import { useRef } from "react"
+import { useContext, useRef } from "react"
+import { TarefaContexto } from "../../contexts/TarefaContexto"
 
-export function CriarTarefa({tarefas, setTarefas}) {
+export function CriarTarefa() {
+    const {tarefas, setTarefas} = useContext(TarefaContexto)
     const tarefa = useRef('')
 
     function adicionarTarefa() {
